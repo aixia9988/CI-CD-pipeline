@@ -4,7 +4,7 @@ pipeline {
 
     tools {
         // Run the Maven installation named "3.8.7" and add it to the path.
-        maven "3.8.7"
+        maven "MY_MAVEN"
     }
 
     stages {
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'mvn clean'
                 echo 'downloading github project...'
-                git credentialsId: 'aixia9988', url: 'https://github.com/aixia9988/CI-CD-pipeline.git'
+                git credentialsId: 'root', url: 'https://github.com/aixia9988/CI-CD-pipeline.git'
             }
         }
 
