@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'mvn clean'
                 echo 'downloading github project...'
-                git credentialsId: 'root', url: 'https://github.com/aixia9988/CI-CD-pipeline.git'
+               git branch: 'main', git credentialsId: 'root', url: 'https://github.com/aixia9988/CI-CD-pipeline.git'
             }
         }
 
