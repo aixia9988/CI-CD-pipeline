@@ -10,6 +10,8 @@ pipeline {
     stages {
         stage('clean and checkout') {
             steps {
+            dir('./backend') {
+                sh 'pwd' // prints /var/jenkins_home/workspace/YOUR_PROJECT_NAME/backend
                 sh 'mvn clean'
                 echo 'downloading github project...'
                 git branch: 'main', credentialsId: 'root', url: 'https://github.com/aixia9988/CI-CD-pipeline.git'
