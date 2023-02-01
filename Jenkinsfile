@@ -10,7 +10,8 @@ pipeline {
     stages {
         stage('clean and checkout') {
             steps {
-                dir('backend') {
+                dir('backend')
+                {
                     sh 'mvn clean'
                 }
                 echo 'downloading github project...'
@@ -62,10 +63,10 @@ pipeline {
         always {
             echo 'generating test report....'
             sh 'ls ./backend/target/surefire-reports'
+        }
 
         failure {
               echo 'it has failed or something'
-              }
         }
     }
 }
