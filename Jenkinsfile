@@ -64,7 +64,7 @@ pipeline {
             sh 'ls ./backend/target/surefire-reports'
 
         failure {
-              echo 'it has failed or something'}
+              echo 'it has failed or something'
+              }
         }
     }
-}
