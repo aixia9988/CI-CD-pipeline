@@ -52,9 +52,10 @@ pipeline {
         stage ('deploy') {
            steps {
                dir ('backend'){
-                   sh 'pwd' // prints /var/jenkins_home/workspace/YOUR_PROJECT_NAME/backend
-                   sh 'cp target/root/ROOT.war /artifacts'
+                 sh 'pwd' // prints /var/jenkins_home/workspace/YOUR_PROJECT_NAME/backend
+                 sh 'cp target/root/ROOT.war /artifacts'
                }
+               echo 'deploy...'
            }
         }
     }
